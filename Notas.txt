@@ -1,0 +1,39 @@
+				Notas de analisis de TPO
+
+Voy a tener 6 tablas
+Me conviene ir creandolas desde las menos relacionadas hasta la mas relacionada
+
+	1 Libros
+		ISBN (Varchar de 13) es PK
+		Titulo (Varchar de 50 como max)
+		Año (int) ponerlo sin "ñ"
+
+	2 Autores
+		CodAut (Varchar 4, MAXIMO VAMOS A TENER DEL 001 A 999) es PK
+		Nombre (varchar 20)
+		Pais (varchar 15)
+
+	3 Socios
+		CodSocio(varchar 4, S001 al S999) es PK
+		Nombre (varchar 20)
+		Estado (varchar 12)
+
+	4 AutorLibro (es tabla intermedia por relacion N x N)
+		Codigo(varchar 4)  es PK y Foreign key (Autores)
+		ISBN (Varchar de 13) es PK y Foreign key (Libros)
+
+	5 Ejemplares
+		ISBN (Varchar de 13) es PK y Foreign key (Libros)
+		Numero (int) es PK tambien
+		Año (int) ponerlo sin "ñ"
+		Edicion (int)
+
+	6 Prestamos
+		ISBN (Varchar de 13) es PK y Foreign key (Libros)
+		Ejemplar (es el numero de ejemplar en la tabla Ejemplares) es PK tambien
+		Socio (es CodSocio en Socios) es PK y FK
+		Fecha (tipo DATE porque solo necesitamos fecha, no HORA --> DATETIME)
+		Estado (Varchar 1 porque es 'E' o 'P')
+		
+		
+		
