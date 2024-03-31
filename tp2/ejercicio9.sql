@@ -1,0 +1,2 @@
+SELECT nombrePersona
+FROM Persona;
