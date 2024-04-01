@@ -1,0 +1,1 @@
+EXEC buscarPersonaPorNombre 'Ignacio'
